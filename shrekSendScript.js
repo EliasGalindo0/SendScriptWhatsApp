@@ -11,7 +11,7 @@ async function enviarScript(scriptText){
 		textarea.textContent = line
 		textarea.dispatchEvent(new InputEvent("input", { bubbles: true }));
 
-		(main.querySelector(`[data-testid="Enviar"]`) || main.querySelector(`[data-icon="Enviar"]`)).click()
+		(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)).click()
 		
 		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 250))
 	}
